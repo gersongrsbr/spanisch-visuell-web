@@ -7,7 +7,7 @@
   <meta name="description" content="300 visuelle Mindmaps im DIN A4 Format, um Spanisch in wenigen Wochen fließend zu sprechen – ohne endloses Grammatik-Büffeln. Für Deutschland, Österreich und die Schweiz.">
   
   <!-- Favicon & Brand Icons -->
-  <link rel="icon" href="assets/sello-garantia-7-tage.png" type="image/png">
+  <link rel="icon" href="assets/sello-garantia-7-tage.webp" type="image/png">
   
   <!-- Google Fonts: Poppins & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -692,6 +692,32 @@
       position: relative;
       box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);
       text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bonus-mockup {
+      width: 100%;
+      height: 160px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FAF8F5;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .bonus-mockup img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.08));
+      transition: transform 0.3s ease;
+    }
+
+    .bonus-card:hover .bonus-mockup img {
+      transform: scale(1.05);
     }
 
     .bonus-pill {
@@ -1343,7 +1369,7 @@
 
       <!-- Hero Mockup 3D Abundante -->
       <div class="hero-mockup-wrapper">
-        <img src="assets/hero-mockup-3d.png" alt="Spanisch Visuell PRO 300 Mindmaps Komplettsystem Mockup" width="1536" height="1024" loading="eager">
+        <img src="assets/hero-mockup-3d.webp" alt="Spanisch Visuell PRO 300 Mindmaps Komplettsystem Mockup" fetchpriority="high" loading="eager" width="1536" height="1024" loading="eager">
       </div>
 
       <!-- Selector interactivo de muestra -->
@@ -1399,7 +1425,7 @@
       <div class="proof-gallery">
         <!-- Foto 1 -->
         <div class="proof-card">
-          <img src="assets/avatar-pov-1.png" alt="Spanisch Mindmaps auf dem Schreibtisch in München" class="proof-img" loading="lazy">
+          <img src="assets/avatar-pov-1.webp" alt="Spanisch Mindmaps auf dem Schreibtisch in München" class="proof-img" loading="lazy">
           <div class="proof-info">
             <div class="proof-name">Hans-Jürgen B.</div>
             <div class="proof-city">München, Deutschland</div>
@@ -1409,7 +1435,7 @@
 
         <!-- Foto 2 -->
         <div class="proof-card">
-          <img src="assets/avatar-pov-2.png" alt="Lernen mit dem iPad in Wien" class="proof-img" loading="lazy">
+          <img src="assets/avatar-pov-2.webp" alt="Lernen mit dem iPad in Wien" class="proof-img" loading="lazy">
           <div class="proof-info">
             <div class="proof-name">Julia S.</div>
             <div class="proof-city">Wien, Österreich</div>
@@ -1419,7 +1445,7 @@
 
         <!-- Foto 3 -->
         <div class="proof-card">
-          <img src="assets/avatar-selfie-1.png" alt="Kunde zufrieden auf Mallorca" class="proof-img" loading="lazy">
+          <img src="assets/avatar-selfie-1.webp" alt="Kunde zufrieden auf Mallorca" class="proof-img" loading="lazy">
           <div class="proof-info">
             <div class="proof-name">Stefan K.</div>
             <div class="proof-city">Salzburg (aktuell Mallorca)</div>
@@ -1429,7 +1455,7 @@
 
         <!-- Foto 4 -->
         <div class="proof-card">
-          <img src="assets/avatar-context-1.png" alt="Lernen unterwegs im Zug in Zürich" class="proof-img" loading="lazy">
+          <img src="assets/avatar-context-1.webp" alt="Lernen unterwegs im Zug in Zürich" class="proof-img" loading="lazy">
           <div class="proof-info">
             <div class="proof-name">Claudia W.</div>
             <div class="proof-city">Zürich, Schweiz</div>
@@ -1458,7 +1484,7 @@
 
       <div class="viewer-display">
         <div class="viewer-image-container" onclick="openZoomModal()">
-          <img id="viewer-img" src="assets/lamina-1-ser-estar.png" alt="Spanisch Mindmap Musterblatt">
+          <img id="viewer-img" src="assets/lamina-1-ser-estar.webp" alt="Spanisch Mindmap Musterblatt">
           <div class="zoom-hint">🔍 Klicken für Vollbild-Zoom</div>
         </div>
       </div>
@@ -1696,12 +1722,15 @@
       <p class="section-subtitle">Wenn Sie heute bestellen, schalten wir diese fünf praxiserprobten Zusatzanleitungen ohne jeden Aufpreis für Sie frei.</p>
 
       <div class="bonus-banner-mockup">
-        <img src="assets/bonos-bundle.png" alt="5 Exklusive Spanisch Boni im Bundle" width="1200" height="700" loading="lazy">
+        <img src="assets/bonos-bundle.webp" alt="5 Exklusive Spanisch Boni im Bundle" width="1200" height="700" loading="lazy">
       </div>
 
       <div class="bonuses-list">
         <!-- Bonus 1 -->
         <div class="bonus-card">
+          <div class="bonus-mockup">
+            <img src="assets/bono-1-notfall-spickzettel.webp" alt="Spanisch-Notfall-Spickzettel für den Urlaub" width="300" height="300" loading="lazy">
+          </div>
           <span class="bonus-pill">GRATIS-BONUS #1</span>
           <span class="bonus-val">19,00 €</span>
           <h4>Spanisch-Notfall-Spickzettel für den Urlaub</h4>
@@ -1710,6 +1739,9 @@
 
         <!-- Bonus 2 -->
         <div class="bonus-card">
+          <div class="bonus-mockup">
+            <img src="assets/bono-2-falsche-freunde.webp" alt="Der Falsche Freunde Guide" width="300" height="300" loading="lazy">
+          </div>
           <span class="bonus-pill">GRATIS-BONUS #2</span>
           <span class="bonus-val">19,00 €</span>
           <h4>Der „Falsche Freunde“ Guide</h4>
@@ -1718,6 +1750,9 @@
 
         <!-- Bonus 3 -->
         <div class="bonus-card">
+          <div class="bonus-mockup">
+            <img src="assets/bono-3-aussprache-masterclass.webp" alt="Aussprache-Masterclass Illustriert" width="300" height="300" loading="lazy">
+          </div>
           <span class="bonus-pill">GRATIS-BONUS #3</span>
           <span class="bonus-val">25,00 €</span>
           <h4>Aussprache-Masterclass (Illustriert)</h4>
@@ -1726,6 +1761,9 @@
 
         <!-- Bonus 4 -->
         <div class="bonus-card">
+          <div class="bonus-mockup">
+            <img src="assets/bono-4-restaurant-tapas.webp" alt="Restaurant- und Tapas-Dolmetscher" width="300" height="300" loading="lazy">
+          </div>
           <span class="bonus-pill">GRATIS-BONUS #4</span>
           <span class="bonus-val">19,00 €</span>
           <h4>Restaurant- & Tapas-Dolmetscher</h4>
@@ -1734,6 +1772,9 @@
 
         <!-- Bonus 5 -->
         <div class="bonus-card">
+          <div class="bonus-mockup">
+            <img src="assets/bono-5-lebenslanger-zugang.webp" alt="Lebenslanger Zugriff und Kostenlose Updates" width="300" height="300" loading="lazy">
+          </div>
           <span class="bonus-pill">GRATIS-BONUS #5</span>
           <span class="bonus-val">15,00 €</span>
           <h4>Lebenslanger Zugriff & Kostenlose Updates</h4>
@@ -1755,7 +1796,7 @@
       <div class="whatsapp-grid">
         <!-- Chat Michael -->
         <div class="whatsapp-card">
-          <img src="assets/whatsapp-michael.png" alt="WhatsApp Erfahrung Michael B. aus Valencia" loading="lazy">
+          <img src="assets/whatsapp-michael.webp" alt="WhatsApp Erfahrung Michael B. aus Valencia" loading="lazy">
           <div class="whatsapp-caption">
             <p><strong>Michael B. aus Augsburg</strong> schickte uns dieses Foto direkt aus seinem Urlaub in Valencia. Nach nur 4 Wochen Vorbereitung mit den Mindmaps bestellte er problemlos auf Spanisch.</p>
           </div>
@@ -1763,7 +1804,7 @@
 
         <!-- Chat Julia -->
         <div class="whatsapp-card">
-          <img src="assets/whatsapp-julia.png" alt="WhatsApp Erfahrung Julia S. aus Wien" loading="lazy">
+          <img src="assets/whatsapp-julia.webp" alt="WhatsApp Erfahrung Julia S. aus Wien" loading="lazy">
           <div class="whatsapp-caption">
             <p><strong>Julia S. aus Wien</strong> löste ihr zweijähriges Frust-Thema mit dem Subjuntivo in nur 10 Minuten durch die visuelle WEIRDO-Mindmap auf ihrem iPad.</p>
           </div>
@@ -1785,7 +1826,7 @@
         <!-- Review 1 -->
         <div class="amazon-review">
           <div class="review-header">
-            <img src="assets/avatar-review-1.png" alt="Michael B." class="review-avatar">
+            <img src="assets/avatar-review-1.webp" alt="Michael B." class="review-avatar">
             <div>
               <div class="review-author">Michael B.</div>
               <div class="review-verified">✓ Verifizierter Kauf (Augsburg)</div>
@@ -1801,7 +1842,7 @@
         <!-- Review 2 -->
         <div class="amazon-review">
           <div class="review-header">
-            <img src="assets/avatar-review-2.png" alt="Julia S." class="review-avatar">
+            <img src="assets/avatar-review-2.webp" alt="Julia S." class="review-avatar">
             <div>
               <div class="review-author">Julia S.</div>
               <div class="review-verified">✓ Verifizierter Kauf (Wien)</div>
@@ -1817,7 +1858,7 @@
         <!-- Review 3 -->
         <div class="amazon-review">
           <div class="review-header">
-            <img src="assets/avatar-review-3.png" alt="Stefan K." class="review-avatar">
+            <img src="assets/avatar-review-3.webp" alt="Stefan K." class="review-avatar">
             <div>
               <div class="review-author">Stefan K.</div>
               <div class="review-verified">✓ Verifizierter Kauf (Salzburg)</div>
@@ -1833,7 +1874,7 @@
         <!-- Review 4 -->
         <div class="amazon-review">
           <div class="review-header">
-            <img src="assets/avatar-review-4.png" alt="Claudia W." class="review-avatar">
+            <img src="assets/avatar-review-4.webp" alt="Claudia W." class="review-avatar">
             <div>
               <div class="review-author">Claudia W.</div>
               <div class="review-verified">✓ Verifizierter Kauf (Zürich)</div>
@@ -1941,7 +1982,7 @@
        ========================================================================== -->
   <section class="container">
     <div class="guarantee-box">
-      <img src="assets/sello-garantia-7-tage.png" alt="7 Tage Geld zurück Garantie Siegel 3D" class="guarantee-seal-img" loading="lazy">
+      <img src="assets/sello-garantia-7-tage.webp" alt="7 Tage Geld zurück Garantie Siegel 3D" class="guarantee-seal-img" loading="lazy">
       <div class="guarantee-text">
         <h3>Unsere 100% risikofreie 7-Tage-Garantie</h3>
         <p style="margin-bottom: 12px;">
@@ -1970,7 +2011,7 @@
       <div class="pricing-content">
         <!-- Mockup Bundle Oferta -->
         <div class="pricing-mockup">
-          <img src="assets/mockup-oferta-1990.png" alt="Spanisch Visuell PRO Komplettpaket" loading="lazy">
+          <img src="assets/mockup-oferta-1990.webp" alt="Spanisch Visuell PRO Komplettpaket" loading="lazy">
         </div>
 
         <!-- Wertaufstellung -->
@@ -2018,7 +2059,7 @@
       </p>
 
       <div class="bump-bundle-img">
-        <img src="assets/mockup-combo-bumps.png" alt="Mega Spanisch Vollpaket 4-in-1 Combo" loading="lazy">
+        <img src="assets/mockup-combo-bumps.webp" alt="Mega Spanisch Vollpaket 4-in-1 Combo" loading="lazy">
       </div>
 
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; font-size: 0.9rem; font-weight: 600;">
@@ -2197,7 +2238,7 @@
 
   <!-- Modal de Zoom para Láminas Interiores -->
   <div id="zoom-modal" class="modal-overlay" onclick="closeZoomModal()">
-    <img id="modal-img" class="modal-content" src="assets/lamina-1-ser-estar.png" alt="Vergrößerte Ansicht">
+    <img id="modal-img" class="modal-content" src="assets/lamina-1-ser-estar.webp" alt="Vergrößerte Ansicht">
   </div>
 
   <!-- ==========================================================================
@@ -2206,10 +2247,10 @@
   <script>
     // 1. Selector de Láminas Interiores
     const viewerImages = [
-      'assets/lamina-1-ser-estar.png',
-      'assets/lamina-2-essen-restaurant.png',
-      'assets/lamina-3-urlaub-reisen.png',
-      'assets/lamina-4-grammatik-zeitformen.png'
+      'assets/lamina-1-ser-estar.webp',
+      'assets/lamina-2-essen-restaurant.webp',
+      'assets/lamina-3-urlaub-reisen.webp',
+      'assets/lamina-4-grammatik-zeitformen.webp'
     ];
 
     function switchViewer(index, btn) {
@@ -2297,5 +2338,49 @@
       setInterval(showNextToast, 12000);
     }, 4000);
   </script>
+
+  <!-- ==========================================================================
+       7. PRESERVACIÓN E INYECCIÓN AUTOMÁTICA DE UTMS HACIA CHECKOUTS
+       ========================================================================== -->
+  <script>
+    (function() {
+      function preserveAndInjectUTMs() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.toString()) return;
+
+        // Lista de parámetros clave a propagar sin perder ninguno
+        const trackingKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'xcod', 'sck', 'src'];
+        
+        // Seleccionar todos los enlaces de compra y botones hacia Hotmart o checkout
+        const links = document.querySelectorAll('a[href*="hotmart.com"], a.btn-cta, a.sticky-btn');
+
+        links.forEach(link => {
+          let href = link.getAttribute('href');
+          if (!href || href.startsWith('#')) return;
+
+          try {
+            const targetUrl = new URL(href, window.location.origin);
+            
+            // Pasar todos los parámetros de la URL actual al link de destino
+            urlParams.forEach((val, key) => {
+              targetUrl.searchParams.set(key, val);
+            });
+
+            link.setAttribute('href', targetUrl.toString());
+          } catch (e) {
+            const separator = href.includes('?') ? '&' : '?';
+            link.setAttribute('href', href + separator + urlParams.toString());
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', preserveAndInjectUTMs);
+      } else {
+        preserveAndInjectUTMs();
+      }
+    })();
+  </script>
 </body>
+
 </html>
