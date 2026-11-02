@@ -1,1 +1,4 @@
 *.py
+__pycache__/
+*.png
+mobile-preview-375.png

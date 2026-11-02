@@ -88,6 +88,449 @@
     .text-purple { color: var(--purple-primary); }
     .text-green { color: var(--green-cta); }
 
+    
+    /* ==========================================================================
+       4B. SECCIÓN: CARRUSEL CONTINUO DE 3 FILAS BIDIRECCIONALES (ABUNDANCIA 300)
+       ========================================================================== */
+    .section-3rows-carousel {
+      padding: 70px 0 60px 0;
+      background: #FFFFFF;
+      overflow: hidden;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .carousel-3rows-wrapper {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .carousel-row {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+    }
+
+    .row-left .carousel-track {
+      animation: scroll-row-left 42s linear infinite;
+    }
+
+    .row-right .carousel-track {
+      animation: scroll-row-right 42s linear infinite;
+    }
+
+    .carousel-row:hover .carousel-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-row-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes scroll-row-right {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    .sheet-card {
+      width: 220px;
+      flex-shrink: 0;
+      background: var(--bg-main);
+      border-radius: var(--radius-md);
+      padding: 10px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 8px 20px -4px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sheet-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px -4px rgba(124, 58, 237, 0.22);
+      border-color: var(--purple-border);
+    }
+
+    .sheet-card img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-sm);
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      .sheet-card {
+        width: 165px;
+        padding: 7px;
+      }
+      .carousel-3rows-wrapper {
+        gap: 12px;
+      }
+    }
+
+    /* ==========================================================================
+       17. SECCIÓN: GRID DE DOS PLANES (BASIC 14,90 € VS PREMIUM 19,90 €)
+       ========================================================================== */
+    .pricing-plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto 0 auto;
+      align-items: stretch;
+    }
+
+    @media (max-width: 860px) {
+      .pricing-plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 540px;
+      }
+    }
+
+    .plan-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .plan-card.highlighted {
+      border: 2px solid var(--purple-primary);
+      box-shadow: 0 20px 50px -10px rgba(124, 58, 237, 0.35);
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF5FF 100%);
+    }
+
+    .popular-ribbon {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
+      white-space: nowrap;
+    }
+
+    .plan-badge-simple {
+      display: inline-block;
+      align-self: flex-start;
+      background: #F4F4F5;
+      color: #71717A;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+
+    .plan-title {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .plan-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      min-height: 40px;
+    }
+
+    .plan-mockup-wrap {
+      max-width: 280px;
+      margin: 0 auto 20px auto;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .plan-price-wrap {
+      text-align: center;
+      padding: 16px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 20px;
+    }
+
+    .plan-orig-price {
+      font-size: 1rem;
+      color: #94A3B8;
+      text-decoration: line-through;
+      font-weight: 600;
+    }
+
+    .plan-current-price {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--text-main);
+    }
+
+    .plan-card.highlighted .plan-current-price {
+      color: var(--green-cta);
+    }
+
+    .plan-price-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .plan-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+      flex-grow: 1;
+    }
+
+    .plan-features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 11px;
+      line-height: 1.4;
+    }
+
+    .plan-features-list li.disabled {
+      color: #A1A1AA;
+    }
+
+    .plan-features-list .chk {
+      color: var(--green-cta);
+      font-weight: 900;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    .plan-features-list .cross {
+      color: #D4D4D8;
+      font-weight: 900;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    .btn-plan-basic {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #FFFFFF;
+      color: var(--purple-primary);
+      border: 2px solid var(--purple-primary);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-plan-basic:hover {
+      background: var(--purple-light);
+    }
+
+    .btn-plan-premium {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 1.08rem;
+    }
+
+    /* ==========================================================================
+       UPGRADE MODAL DIALOG
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 20, 28, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      max-width: 580px;
+      width: 100%;
+      padding: 36px 28px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+      text-align: center;
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: #F4F4F5;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #71717A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      background: #E4E4E7;
+      color: #18181B;
+    }
+
+    .modal-badge {
+      display: inline-block;
+      background: #FEF3C7;
+      color: #B45309;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+
+    .modal-title {
+      font-size: clamp(1.3rem, 3.2vw, 1.7rem);
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .modal-comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1.25fr;
+      align-items: center;
+      gap: 12px;
+      margin: 22px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      .modal-comparison {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .modal-arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    .modal-box {
+      padding: 16px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .modal-box.basic-box {
+      background: #F8FAFC;
+    }
+
+    .modal-box.premium-box {
+      background: #FAF5FF;
+      border: 2px solid var(--purple-primary);
+      box-shadow: 0 8px 20px -4px rgba(124, 58, 237, 0.25);
+    }
+
+    .box-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #64748B;
+      text-transform: uppercase;
+    }
+
+    .box-tag-popular {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--purple-primary);
+      text-transform: uppercase;
+    }
+
+    .box-price {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin: 4px 0;
+    }
+
+    .box-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .modal-arrow {
+      font-size: 1.5rem;
+      color: var(--purple-primary);
+      font-weight: 900;
+    }
+
+    .modal-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .modal-skip {
+      margin-top: 16px;
+    }
+
+    .modal-skip a {
+      font-size: 0.82rem;
+      color: #71717A;
+      text-decoration: underline;
+    }
+
+    .modal-skip a:hover {
+      color: #18181B;
+    }
+
     /* ==========================================================================
        1. SECCIÓN: MARQUEE BAR CONTINUA INFINITA
        ========================================================================== */
@@ -1466,7 +1909,79 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
+    <!-- ==========================================================================
+       4B. SECCIÓN: CARRUSEL CONTINUO DE 3 FILAS BIDIRECCIONALES (ABUNDANCIA 300)
+       ========================================================================== -->
+  <section class="section-3rows-carousel">
+    <div class="container text-center">
+      <div class="section-eyebrow">Visuelle Fülle & Vielfalt</div>
+      <h2 class="section-title">300 Mindmaps für jede Alltagssituation</h2>
+      <p class="section-subtitle">
+        Vom ersten Restaurantbesuch bis zu komplexen Zeitformen: Jedes Thema auf einer einzigen DIN A4 Seite visuell auf den Punkt gebracht.
+      </p>
+    </div>
+
+    <div class="carousel-3rows-wrapper">
+      <!-- Fila 1: Hacia la izquierda -->
+      <div class="carousel-row row-left">
+        <div class="carousel-track">
+          <div class="sheet-card"><img src="assets/lamina-1-ser-estar.webp" alt="Mindmap Ser vs Estar" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-2-essen-restaurant.webp" alt="Mindmap Im Restaurant" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-3-urlaub-reisen.webp" alt="Mindmap Reisen & Urlaub" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-4-grammatik-zeitformen.webp" alt="Mindmap Zeitformen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-5-vergangenheit-pret-imperf.webp" alt="Mindmap Vergangenheit" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-6-subjunktiv-einfach.webp" alt="Mindmap Subjuntivo" loading="lazy"></div>
+          <!-- Duplicado para loop infinito fluido -->
+          <div class="sheet-card"><img src="assets/lamina-1-ser-estar.webp" alt="Mindmap Ser vs Estar" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-2-essen-restaurant.webp" alt="Mindmap Im Restaurant" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-3-urlaub-reisen.webp" alt="Mindmap Reisen & Urlaub" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-4-grammatik-zeitformen.webp" alt="Mindmap Zeitformen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-5-vergangenheit-pret-imperf.webp" alt="Mindmap Vergangenheit" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-6-subjunktiv-einfach.webp" alt="Mindmap Subjuntivo" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- Fila 2: Hacia la derecha -->
+      <div class="carousel-row row-right">
+        <div class="carousel-track">
+          <div class="sheet-card"><img src="assets/bono-1-notfall-spickzettel.webp" alt="Notfall Spickzettel" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-7-flughafen-transport.webp" alt="Mindmap Flughafen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/bono-2-falsche-freunde.webp" alt="Falsche Freunde" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-8-smalltalk-spanien.webp" alt="Mindmap Smalltalk" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/bono-4-restaurant-tapas.webp" alt="Restaurant & Tapas" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/bono-3-aussprache-masterclass.webp" alt="Aussprache Masterclass" loading="lazy"></div>
+          <!-- Duplicado para loop infinito fluido -->
+          <div class="sheet-card"><img src="assets/bono-1-notfall-spickzettel.webp" alt="Notfall Spickzettel" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-7-flughafen-transport.webp" alt="Mindmap Flughafen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/bono-2-falsche-freunde.webp" alt="Falsche Freunde" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-8-smalltalk-spanien.webp" alt="Mindmap Smalltalk" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/bono-4-restaurant-tapas.webp" alt="Restaurant & Tapas" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/bono-3-aussprache-masterclass.webp" alt="Aussprache Masterclass" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- Fila 3: Hacia la izquierda -->
+      <div class="carousel-row row-left">
+        <div class="carousel-track">
+          <div class="sheet-card"><img src="assets/lamina-5-vergangenheit-pret-imperf.webp" alt="Mindmap Vergangenheit" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-8-smalltalk-spanien.webp" alt="Mindmap Smalltalk" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-3-urlaub-reisen.webp" alt="Mindmap Reisen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-6-subjunktiv-einfach.webp" alt="Mindmap Subjuntivo" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-2-essen-restaurant.webp" alt="Mindmap Essen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-7-flughafen-transport.webp" alt="Mindmap Transport" loading="lazy"></div>
+          <!-- Duplicado para loop infinito fluido -->
+          <div class="sheet-card"><img src="assets/lamina-5-vergangenheit-pret-imperf.webp" alt="Mindmap Vergangenheit" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-8-smalltalk-spanien.webp" alt="Mindmap Smalltalk" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-3-urlaub-reisen.webp" alt="Mindmap Reisen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-6-subjunktiv-einfach.webp" alt="Mindmap Subjuntivo" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-2-essen-restaurant.webp" alt="Mindmap Essen" loading="lazy"></div>
+          <div class="sheet-card"><img src="assets/lamina-7-flughafen-transport.webp" alt="Mindmap Transport" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ==========================================================================
        5. SECCIÓN: VISOR INTERACTIVO ("SO SIEHT DAS MATERIAL VON INNEN AUS")
        ========================================================================== -->
   <section class="viewer-section text-center">
@@ -1995,53 +2510,90 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       17. SECCIÓN: CAJETILLA DE OFERTA PRINCIPAL (CAJA DE PRECIOS 19,90 €)
+    <!-- ==========================================================================
+       17. SECCIÓN: CAJETILLA DE DOS PLANES (BASIC 14,90 € VS PREMIUM 19,90 €)
        ========================================================================== -->
-  <section id="oferta" class="container">
-    <div class="pricing-box-wrapper">
-      <div class="pricing-header">
-        <span class="hero-badge" style="background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.4); margin-bottom: 8px;">
-          🔥 BEGRENZTES SONDERANGEBOT
-        </span>
-        <h2>Spanisch Visuell PRO Komplettsystem</h2>
-        <p style="color: #EDE9FE; font-size: 0.95rem;">Alles, was Sie brauchen, um Spanisch schnell und entspannt zu sprechen.</p>
+  <section id="oferta" class="container" style="padding-top: 40px; padding-bottom: 60px;">
+    <div class="text-center" style="margin-bottom: 30px;">
+      <span class="hero-badge">WÄHLEN SIE IHREN ZUGANG</span>
+      <h2 class="section-title">Starten Sie noch heute mit Spanisch Visuell</h2>
+      <p class="section-subtitle">Einmalige Zahlung • Kein Abonnement • Lebenslanger Zugriff inklusive 7 Tage Geld-zurück-Garantie</p>
+    </div>
+
+    <div class="pricing-plans-grid">
+      <!-- PLAN BASIC (14,90 €) -->
+      <div class="plan-card plan-basic">
+        <span class="plan-badge-simple">BASIS-EINSTIEG</span>
+        <h3 class="plan-title">Basis-Paket</h3>
+        <p class="plan-subtitle">Ideal zum Reinschnuppern in die visuelle Lernmethode für Einsteiger.</p>
+        
+        <div class="plan-mockup-wrap">
+          <img src="assets/mockup-oferta-basic-1490.webp" alt="Spanisch Visuell Basis-Paket" loading="lazy">
+        </div>
+
+        <div class="plan-price-wrap">
+          <span class="plan-orig-price">Regulär: 39,00 €</span>
+          <div class="plan-current-price">14,90 €</div>
+          <div class="plan-price-sub">Einmalige Zahlung • Sofort-Download</div>
+        </div>
+
+        <ul class="plan-features-list">
+          <li><span class="chk">✓</span> <span><strong>75 Mindmaps</strong> (Grundwortschatz & Basis-Grammatik)</span></li>
+          <li><span class="chk">✓</span> <span><strong>Modul 1 & 2</strong> enthalten</span></li>
+          <li><span class="chk">✓</span> <span>DIN A4 Vektor-Format (Druckfertig)</span></li>
+          <li><span class="chk">✓</span> <span>7 Tage Geld-zurück-Garantie</span></li>
+          <li class="disabled"><span class="cross">✕</span> <span>Keine Fortgeschrittenen Zeitformen & Subjuntivo</span></li>
+          <li class="disabled"><span class="cross">✕</span> <span>Keine 5 Bonus-Ratgeber (Wert: 97 €)</span></li>
+          <li class="disabled"><span class="cross">✕</span> <span>Keine lebenslangen kostenlosen Updates</span></li>
+        </ul>
+
+        <!-- Botón Basic dispara Modal de Upgrade -->
+        <button type="button" class="btn-plan-basic" onclick="openUpgradeModal()">
+          Basis-Paket wählen (14,90 €)
+        </button>
+
+        <div style="font-size: 0.78rem; color: #71717A; text-align: center; margin-top: 14px;">
+          🛡️ 100% risikofrei mit 7-Tage-Garantie
+        </div>
       </div>
 
-      <div class="pricing-content">
-        <!-- Mockup Bundle Oferta -->
-        <div class="pricing-mockup">
+      <!-- PLAN PREMIUM (19,90 €) - BESTSELLER DESTACADO -->
+      <div class="plan-card plan-premium highlighted">
+        <div class="popular-ribbon">🔥 EMPFOHLEN • 94% WÄHLEN DIESEN PLAN</div>
+        <h3 class="plan-title" style="color: var(--purple-primary); margin-top: 8px;">Komplett-System PRO</h3>
+        <p class="plan-subtitle">Das vollständige 300-Mindmaps-System inklusive aller 5 Bonus-Guides.</p>
+
+        <div class="plan-mockup-wrap" style="max-width: 320px;">
           <img src="assets/mockup-oferta-1990.webp" alt="Spanisch Visuell PRO Komplettpaket" loading="lazy">
         </div>
 
-        <!-- Wertaufstellung -->
-        <div style="text-align: left; max-width: 520px; margin: 0 auto 24px auto;">
-          <ul class="module-list">
-            <li><strong>300 Mindmaps Komplettsystem</strong> (Wert: 67,00 €)</li>
-            <li><strong>Bonus 1:</strong> Notfall-Spickzettel für den Urlaub (Wert: 19,00 €)</li>
-            <li><strong>Bonus 2:</strong> Falsche Freunde Guide (Wert: 19,00 €)</li>
-            <li><strong>Bonus 3:</strong> Aussprache-Masterclass (Wert: 25,00 €)</li>
-            <li><strong>Bonus 4:</strong> Restaurant- & Tapas-Dolmetscher (Wert: 19,00 €)</li>
-            <li><strong>Bonus 5:</strong> Lebenslanger Zugang & Updates (Wert: 15,00 €)</li>
-          </ul>
+        <div class="plan-price-wrap">
+          <span class="plan-orig-price">Regulär: 67,00 €</span>
+          <div class="plan-current-price">19,90 €</div>
+          <div class="plan-price-sub">Einmalige Zahlung • Nur 5,00 € Unterschied zum Basis-Paket</div>
         </div>
 
-        <div class="price-display">
-          <div><span class="original-price">Regulär: 67,00 €</span></div>
-          <div class="final-price">19,90 €</div>
-          <div class="price-tagline">Einmalige Zahlung • Kein Abonnement • Lebenslanger Zugriff</div>
-        </div>
+        <ul class="plan-features-list">
+          <li><span class="chk">✓</span> <span><strong>300 Mindmaps Komplett-System</strong> (Alle 5 Module)</span></li>
+          <li><span class="chk">✓</span> <span><strong>Bonus 1:</strong> Notfall-Spickzettel für den Urlaub (Wert: 19 €)</span></li>
+          <li><span class="chk">✓</span> <span><strong>Bonus 2:</strong> Falsche Freunde Guide (Wert: 19 €)</span></li>
+          <li><span class="chk">✓</span> <span><strong>Bonus 3:</strong> Aussprache-Masterclass (Wert: 25 €)</span></li>
+          <li><span class="chk">✓</span> <span><strong>Bonus 4:</strong> Restaurant- & Tapas-Dolmetscher (Wert: 19 €)</span></li>
+          <li><span class="chk">✓</span> <span><strong>Bonus 5:</strong> Lebenslanger Zugriff & Gratis-Updates (Wert: 15 €)</span></li>
+          <li><span class="chk">✓</span> <span>DIN A4 Gestochen scharf & druckfertig (300 DPI)</span></li>
+          <li><span class="chk">✓</span> <span><strong>7 Tage Geld-zurück-Garantie</strong> (Ohne Wenn und Aber)</span></li>
+        </ul>
 
-        <!-- Botón Verde de Compra Directo a Hotmart -->
-        <a href="https://pay.hotmart.com/?checkoutMode=10" class="btn-cta" target="_self" style="font-size: clamp(1.05rem, 3vw, 1.35rem); padding: 22px 30px;">
+        <!-- Botón Verde Directo a Hotmart -->
+        <a href="https://pay.hotmart.com/?checkoutMode=10" class="btn-cta btn-plan-premium" target="_self" data-utmify-checkout="true">
           JETZT ZUM SONDERPREIS SICHERN (19,90 €) →
         </a>
 
-        <div class="checkout-badges">
-          <span>🔒 256-Bit SSL Verschlüsselt</span>
+        <div class="checkout-badges" style="margin-top: 18px;">
+          <span>🔒 256-Bit SSL</span>
           <span>💳 Klarna Rechnung & Sofort</span>
-          <span>🛡️ PayPal Käuferschutz</span>
-          <span>⚡ Sofort-Download per E-Mail</span>
+          <span>🛡️ PayPal</span>
+          <span>⚡ Sofort-Download</span>
         </div>
       </div>
     </div>
@@ -2352,7 +2904,7 @@
         const trackingKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'xcod', 'sck', 'src'];
         
         // Seleccionar todos los enlaces de compra y botones hacia Hotmart o checkout
-        const links = document.querySelectorAll('a[href*="hotmart.com"], a.btn-cta, a.sticky-btn');
+        const links = document.querySelectorAll('a[href*="hotmart.com"], a.btn-cta, a.sticky-btn, a[data-utmify-checkout="true"], a.skip-link');
 
         links.forEach(link => {
           let href = link.getAttribute('href');
@@ -2381,6 +2933,67 @@
       }
     })();
   </script>
+  <!-- ==========================================================================
+       UPGRADE MODAL DIALOG (BASIC -> PREMIUM FÜR 5 €)
+       ========================================================================== -->
+  <div id="upgrade-modal" class="modal-overlay" onclick="closeUpgradeModalOutside(event)">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeUpgradeModal()" aria-label="Schließen">✕</button>
+      <div class="modal-badge">⚠️ WICHTIGER HINWEIS VOR DEM BEZAHLEN</div>
+      <h3 class="modal-title">Warten Sie! Holen Sie sich das Komplettpaket für nur 5,00 € mehr!</h3>
+      
+      <div class="modal-comparison">
+        <div class="modal-box basic-box">
+          <div class="box-tag">Basis-Paket</div>
+          <div class="box-price">14,90 €</div>
+          <div class="box-desc">Nur 75 Mindmaps<br>Keine Boni</div>
+        </div>
+        <div class="modal-arrow">➔</div>
+        <div class="modal-box premium-box">
+          <div class="box-tag-popular">PRO-EMPFEHLUNG</div>
+          <div class="box-price text-green">19,90 €</div>
+          <div class="box-desc"><strong>300 Mindmaps</strong> (4x mehr Inhalt!)<br><strong>+ Alle 5 Gratis-Boni</strong> (Wert: 97 €)</div>
+        </div>
+      </div>
+
+      <p class="modal-text">
+        Sie verpassen 225 Mindmaps und alle 5 exklusiven Bonus-Ratgeber für einen minimalen Unterschied von nur <strong>5,00 €</strong>.
+      </p>
+
+      <!-- Botón Upgrade a Premium -->
+      <a href="https://pay.hotmart.com/?checkoutMode=10" class="btn-cta" target="_self" data-utmify-checkout="true" style="display: block; width: 100%; text-align: center; padding: 18px 24px; font-size: 1.05rem;">
+        JA! ICH WILL DAS KOMPLETTPAKET FÜR NUR 19,90 € →
+      </a>
+
+      <!-- Enlace Continuar con Basic -->
+      <div class="modal-skip">
+        <a href="https://pay.hotmart.com/?checkoutMode=10&plan=basic" class="skip-link" target="_self" data-utmify-checkout="true">
+          Nein danke, ich möchte nur die 75 Basis-Mindmaps für 14,90 € ohne Boni kaufen »
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openUpgradeModal() {
+      const modal = document.getElementById('upgrade-modal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeUpgradeModal() {
+      const modal = document.getElementById('upgrade-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeUpgradeModalOutside(event) {
+      if (event.target.id === 'upgrade-modal') {
+        closeUpgradeModal();
+      }
+    }
+  </script>
+
 </body>
 
 </html>
