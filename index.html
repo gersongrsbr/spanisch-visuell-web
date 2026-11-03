@@ -176,7 +176,7 @@
     }
 
     /* ==========================================================================
-       17. SECCIÓN: GRID DE DOS PLANES (BASIC 14,90 € VS PREMIUM 19,90 €)
+       17. SECCIÓN: GRID DE DOS PLANES (BASIC 14,90 € VS PREMIUM 27,00 €)
        ========================================================================== */
     .pricing-plans-grid {
       display: grid;
@@ -1389,7 +1389,7 @@
     }
 
     /* ==========================================================================
-       17. SECCIÓN: CAJETILLA DE OFERTA PRINCIPAL (CAJA DE PRECIOS 19,90 €)
+       17. SECCIÓN: CAJETILLA DE OFERTA PRINCIPAL (CAJA DE PRECIOS 27,00 €)
        ========================================================================== */
     .pricing-box-wrapper {
       max-width: 780px;
@@ -1765,6 +1765,152 @@
         font-size: 0.85rem;
       }
     }
+  
+    /* ==========================================================================
+       PRO CARD MORADO VIBRANTE DE ALTA CONVERSIÓN & OPTIMIZACIÓN MOBILE
+       ========================================================================== */
+    .plan-card.plan-premium.highlighted {
+      background: linear-gradient(150deg, #7C3AED 0%, #5B21B6 60%, #4C1D95 100%) !important;
+      color: #FFFFFF !important;
+      border: 2px solid #C4B5FD !important;
+      box-shadow: 0 25px 60px -10px rgba(109, 40, 217, 0.6), 0 0 35px rgba(139, 92, 246, 0.35) !important;
+      position: relative;
+    }
+
+    .plan-card.plan-premium.highlighted .popular-ribbon {
+      background: #FBBF24 !important;
+      color: #18181B !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 14px rgba(251, 191, 36, 0.5) !important;
+    }
+
+    .plan-card.plan-premium.highlighted .plan-title {
+      color: #FFFFFF !important;
+    }
+
+    .plan-card.plan-premium.highlighted .plan-subtitle {
+      color: #E9D5FF !important;
+    }
+
+    .plan-card.plan-premium.highlighted .plan-price-wrap {
+      border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .plan-card.plan-premium.highlighted .plan-orig-price {
+      color: #DDD6FE !important;
+    }
+
+    .plan-card.plan-premium.highlighted .plan-current-price {
+      color: #4ADE80 !important;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+    }
+
+    .plan-card.plan-premium.highlighted .plan-price-sub {
+      color: #EDE9FE !important;
+    }
+
+    .plan-card.plan-premium.highlighted .plan-features-list li {
+      color: #F5F3FF !important;
+    }
+
+    .plan-card.plan-premium.highlighted .plan-features-list .chk {
+      color: #4ADE80 !important;
+    }
+
+    .plan-card.plan-premium.highlighted .checkout-badges span {
+      color: #E9D5FF !important;
+    }
+
+    .plan-card.plan-premium.highlighted .btn-plan-premium {
+      background: #16A34A !important;
+      color: #FFFFFF !important;
+      border: 1px solid #86EFAC !important;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.5) !important;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .plan-card.plan-premium.highlighted .btn-plan-premium:hover {
+      background: #15803D !important;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(22, 163, 74, 0.65) !important;
+    }
+
+    /* Bonus mockups plenas */
+    .bonus-mockup {
+      width: 100% !important;
+      height: 220px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: transparent !important;
+      border-radius: var(--radius-sm) !important;
+      overflow: hidden !important;
+    }
+
+    .bonus-mockup img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.12)) !important;
+      transition: transform 0.3s ease;
+    }
+
+    /* WhatsApp Grid 3 Columns */
+    .whatsapp-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)) !important;
+      gap: 25px !important;
+      margin-top: 35px !important;
+    }
+
+    .whatsapp-card {
+      background: #FFFFFF !important;
+      border-radius: var(--radius-md) !important;
+      overflow: hidden !important;
+      border: 1px solid var(--border-subtle) !important;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06) !important;
+      transition: transform 0.25s ease !important;
+    }
+
+    .whatsapp-card:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 15px 35px rgba(124, 58, 237, 0.12) !important;
+    }
+
+    .whatsapp-card img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+    }
+
+    /* Mobile spacing reduction */
+    @media (max-width: 640px) {
+      .trust-bar {
+        padding: 10px 0 !important;
+        margin-bottom: 15px !important;
+      }
+      .trust-grid {
+        gap: 8px 14px !important;
+      }
+      .trust-item {
+        font-size: 0.78rem !important;
+        gap: 6px !important;
+      }
+      .section-spacing {
+        padding: 30px 0 !important;
+      }
+      .bonus-section {
+        padding: 40px 0 !important;
+      }
+      .bonus-mockup {
+        height: 190px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1872,7 +2018,7 @@
           <div class="proof-info">
             <div class="proof-name">Hans-Jürgen B.</div>
             <div class="proof-city">München, Deutschland</div>
-            <p class="proof-quote">„Jeden Morgen beim ersten Kaffee eine Mindmap. Nach 3 Wochen verstehe ich endlich die Zeiten.“</p>
+            <p class="proof-quote">„Ich lerne jeden Morgen beim ersten Kaffee am Küchentisch mit den laminierten DIN-A4-Mindmaps. Kein trockenes Grammatikbuch mehr: Alle Konjugationen auf einen Blick. Nach 3 Wochen konnte ich mich in Madrid fließend verständigen.“</p>
           </div>
         </div>
 
@@ -2236,10 +2382,6 @@
       <h2 class="section-title">5 exklusive Bonus-Pakete (Gesamtwert: 97,00 €)</h2>
       <p class="section-subtitle">Wenn Sie heute bestellen, schalten wir diese fünf praxiserprobten Zusatzanleitungen ohne jeden Aufpreis für Sie frei.</p>
 
-      <div class="bonus-banner-mockup">
-        <img src="assets/bonos-bundle.webp" alt="5 Exklusive Spanisch Boni im Bundle" width="1200" height="700" loading="lazy">
-      </div>
-
       <div class="bonuses-list">
         <!-- Bonus 1 -->
         <div class="bonus-card">
@@ -2308,20 +2450,28 @@
       <h2 class="section-title">Erfahrungsberichte von Spanisch-Lernenden</h2>
       <p class="section-subtitle">Nichts beweist den Erfolg besser als echte Rückmeldungen von Kunden, die das Material im Urlaub und Alltag einsetzen.</p>
 
-      <div class="whatsapp-grid">
-        <!-- Chat Michael -->
+            <div class="whatsapp-grid">
+        <!-- Chat 1: Michael B. -->
         <div class="whatsapp-card">
-          <img src="assets/whatsapp-michael.webp" alt="WhatsApp Erfahrung Michael B. aus Valencia" loading="lazy">
+          <img src="assets/whatsapp-ugc-1.webp" alt="WhatsApp Erfahrung Michael B. aus Valencia" loading="lazy">
           <div class="whatsapp-caption">
-            <p><strong>Michael B. aus Augsburg</strong> schickte uns dieses Foto direkt aus seinem Urlaub in Valencia. Nach nur 4 Wochen Vorbereitung mit den Mindmaps bestellte er problemlos auf Spanisch.</p>
+            <p><strong>Michael B. aus Augsburg</strong> schickte uns diese Nachricht direkt aus seinem Urlaub in Valencia. Nach 4 Wochen Vorbereitung mit den Mindmaps bestellte er problemlos alles auf Spanisch.</p>
           </div>
         </div>
 
-        <!-- Chat Julia -->
+        <!-- Chat 2: Julia S. -->
         <div class="whatsapp-card">
-          <img src="assets/whatsapp-julia.webp" alt="WhatsApp Erfahrung Julia S. aus Wien" loading="lazy">
+          <img src="assets/whatsapp-ugc-2.webp" alt="WhatsApp Erfahrung Julia S. aus Wien" loading="lazy">
           <div class="whatsapp-caption">
-            <p><strong>Julia S. aus Wien</strong> löste ihr zweijähriges Frust-Thema mit dem Subjuntivo in nur 10 Minuten durch die visuelle WEIRDO-Mindmap auf ihrem iPad.</p>
+            <p><strong>Julia S. aus Wien</strong> lernte direkt auf dem iPad in Mallorca und konnte im Hotel alle Anliegen und Sonderwünsche ohne Probleme auf Spanisch klären.</p>
+          </div>
+        </div>
+
+        <!-- Chat 3: Stefan K. -->
+        <div class="whatsapp-card">
+          <img src="assets/whatsapp-ugc-3.webp" alt="WhatsApp Erfahrung Stefan K. aus Zürich" loading="lazy">
+          <div class="whatsapp-caption">
+            <p><strong>Stefan K. aus Zürich</strong> verstand mit 54 Jahren nach nur 2 Wochen die schwierigen Vergangenheitsformen (Indefinido vs. Imperfecto) dank der klaren visuellen Gegenüberstellung.</p>
           </div>
         </div>
       </div>
@@ -2445,7 +2595,7 @@
             </tr>
             <tr>
               <td><strong>Preismodell</strong></td>
-              <td class="highlight">✓ Einmalig 19,90 €</td>
+              <td class="highlight">✓ Einmalig 27,00 €</td>
               <td>Teures Monats-Abo (80–120 €/Jahr)</td>
               <td>180 € – 350 € pro Semester</td>
             </tr>
@@ -2511,7 +2661,7 @@
   </section>
 
     <!-- ==========================================================================
-       17. SECCIÓN: CAJETILLA DE DOS PLANES (BASIC 14,90 € VS PREMIUM 19,90 €)
+       17. SECCIÓN: CAJETILLA DE DOS PLANES (BASIC 14,90 € VS PREMIUM 27,00 €)
        ========================================================================== -->
   <section id="oferta" class="container" style="padding-top: 40px; padding-bottom: 60px;">
     <div class="text-center" style="margin-bottom: 30px;">
@@ -2557,7 +2707,7 @@
         </div>
       </div>
 
-      <!-- PLAN PREMIUM (19,90 €) - BESTSELLER DESTACADO -->
+      <!-- PLAN PREMIUM (27,00 €) - BESTSELLER DESTACADO -->
       <div class="plan-card plan-premium highlighted">
         <div class="popular-ribbon">🔥 EMPFOHLEN • 94% WÄHLEN DIESEN PLAN</div>
         <h3 class="plan-title" style="color: var(--purple-primary); margin-top: 8px;">Komplett-System PRO</h3>
@@ -2569,8 +2719,8 @@
 
         <div class="plan-price-wrap">
           <span class="plan-orig-price">Regulär: 67,00 €</span>
-          <div class="plan-current-price">19,90 €</div>
-          <div class="plan-price-sub">Einmalige Zahlung • Nur 5,00 € Unterschied zum Basis-Paket</div>
+          <div class="plan-current-price">27,00 €</div>
+          <div class="plan-price-sub">Einmalige Zahlung • Nur 12,10 € Unterschied zum Basis-Paket</div>
         </div>
 
         <ul class="plan-features-list">
@@ -2586,7 +2736,7 @@
 
         <!-- Botón Verde Directo a Hotmart -->
         <a href="https://pay.hotmart.com/?checkoutMode=10" class="btn-cta btn-plan-premium" target="_self" data-utmify-checkout="true">
-          JETZT ZUM SONDERPREIS SICHERN (19,90 €) →
+          JETZT ZUM SONDERPREIS SICHERN (27,00 €) →
         </a>
 
         <div class="checkout-badges" style="margin-top: 18px;">
@@ -2600,30 +2750,8 @@
   </section>
 
   <!-- ==========================================================================
-       18. SECCIÓN: ORDER BUMPS VORSCHAU (ERWEITERUNGEN)
-       ========================================================================== -->
-  <section class="container">
-    <div class="bumps-preview">
-      <span class="hero-badge">ZUSATZ-OPTIONEN AN DER KASSE</span>
-      <h3 style="font-size: 1.6rem; margin-bottom: 10px;">Möchten Sie Ihr Lernen noch weiter beschleunigen?</h3>
-      <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">
-        An der Kasse können Sie mit nur einem einzigen Klick nützliche Spezial-Erweiterungen hinzufügen (oder alles im Mega-Sparpaket mit 65% Rabatt für nur 12,90 € freischalten).
-      </p>
-
-      <div class="bump-bundle-img">
-        <img src="assets/mockup-combo-bumps.webp" alt="Mega Spanisch Vollpaket 4-in-1 Combo" loading="lazy">
-      </div>
-
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; font-size: 0.9rem; font-weight: 600;">
-        <span>🎧 Muttersprachler-Audio zu allen 300 Mindmaps</span>
-        <span>📖 Subjuntivo-Meisterkurs</span>
-        <span>🌴 500 Sofort-Sätze für den Urlaub</span>
-        <span>📅 30-Tage Sprech-Challenge</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
+       19. SECCIÓN: FAQ (HÄUFIG GESTELLTE FRAGEN)
+       ========================================================================== -->===========================================================
        19. SECCIÓN: FAQ (HÄUFIG GESTELLTE FRAGEN)
        ========================================================================== -->
   <section class="section-spacing text-center" style="background: #FFFFFF;">
@@ -2640,7 +2768,7 @@
             <span class="faq-arrow">▼</span>
           </div>
           <div class="faq-answer">
-            Es handelt sich um eine <strong>reine Einmalzahlung von nur 19,90 €</strong>. Es gibt absolut keine versteckten Kosten, keine Mitgliedschaften und keine automatischen Verlängerungen. Sie zahlen einmal und besitzen das gesamte Material ein Leben lang.
+            Es handelt sich um eine <strong>reine Einmalzahlung von nur 27,00 €</strong>. Es gibt absolut keine versteckten Kosten, keine Mitgliedschaften und keine automatischen Verlängerungen. Sie zahlen einmal und besitzen das gesamte Material ein Leben lang.
           </div>
         </div>
 
@@ -2732,11 +2860,11 @@
       <div class="section-eyebrow">Treffen Sie Ihre Entscheidung</div>
       <h2 class="section-title">In wenigen Wochen fließend Spanisch sprechen</h2>
       <p class="section-subtitle" style="margin-bottom: 30px;">
-        Verlieren Sie keine Zeit mehr mit frustrierenden Grammatiktabellen. Sichern Sie sich jetzt die 300 Mindmaps inklusive aller 5 Boni zum einmaligen Aktionspreis von nur 19,90 €.
+        Verlieren Sie keine Zeit mehr mit frustrierenden Grammatiktabellen. Sichern Sie sich jetzt die 300 Mindmaps inklusive aller 5 Boni zum einmaligen Aktionspreis von nur 27,00 €.
       </p>
 
       <a href="#oferta" class="btn-cta" target="_self">
-        JETZT ZUM SONDERPREIS STARTEN (19,90 €) →
+        JETZT ZUM SONDERPREIS STARTEN (27,00 €) →
       </a>
       <span class="btn-subtext">🛡️ 100% Zufriedenheitsgarantie für 7 Tage • Sofortiger digitaler Zugriff</span>
     </div>
@@ -2940,7 +3068,7 @@
     <div class="modal-card">
       <button class="modal-close-btn" onclick="closeUpgradeModal()" aria-label="Schließen">✕</button>
       <div class="modal-badge">⚠️ WICHTIGER HINWEIS VOR DEM BEZAHLEN</div>
-      <h3 class="modal-title">Warten Sie! Holen Sie sich das Komplettpaket für nur 5,00 € mehr!</h3>
+      <h3 class="modal-title">Warten Sie! Holen Sie sich das Komplettpaket für nur 12,10 € mehr!</h3>
       
       <div class="modal-comparison">
         <div class="modal-box basic-box">
@@ -2951,18 +3079,18 @@
         <div class="modal-arrow">➔</div>
         <div class="modal-box premium-box">
           <div class="box-tag-popular">PRO-EMPFEHLUNG</div>
-          <div class="box-price text-green">19,90 €</div>
+          <div class="box-price text-green">27,00 €</div>
           <div class="box-desc"><strong>300 Mindmaps</strong> (4x mehr Inhalt!)<br><strong>+ Alle 5 Gratis-Boni</strong> (Wert: 97 €)</div>
         </div>
       </div>
 
       <p class="modal-text">
-        Sie verpassen 225 Mindmaps und alle 5 exklusiven Bonus-Ratgeber für einen minimalen Unterschied von nur <strong>5,00 €</strong>.
+        Sie verpassen 225 Mindmaps und alle 5 exklusiven Bonus-Ratgeber für einen minimalen Unterschied von nur <strong>12,10 €</strong>.
       </p>
 
       <!-- Botón Upgrade a Premium -->
       <a href="https://pay.hotmart.com/?checkoutMode=10" class="btn-cta" target="_self" data-utmify-checkout="true" style="display: block; width: 100%; text-align: center; padding: 18px 24px; font-size: 1.05rem;">
-        JA! ICH WILL DAS KOMPLETTPAKET FÜR NUR 19,90 € →
+        JA! ICH WILL DAS KOMPLETTPAKET FÜR NUR 27,00 € →
       </a>
 
       <!-- Enlace Continuar con Basic -->
