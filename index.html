@@ -1895,6 +1895,91 @@
       }
     }
 
+  
+    /* ==========================================================================
+       MODAL ONE-SINGLE-VIEW CALIBRATION (MOBILE-FIRST NO-SCROLL)
+       ========================================================================== */
+    @media (max-width: 640px) {
+      .modal-overlay {
+        padding: 10px !important;
+        align-items: center !important;
+      }
+      .modal-card {
+        padding: 16px 14px 14px 14px !important;
+        max-height: 92vh !important;
+        border-radius: 14px !important;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.4) !important;
+      }
+      .modal-close-btn {
+        top: 8px !important;
+        right: 10px !important;
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 0.85rem !important;
+      }
+      .modal-badge {
+        font-size: 0.68rem !important;
+        padding: 3px 8px !important;
+        margin-bottom: 6px !important;
+      }
+      .modal-title {
+        font-size: 1.08rem !important;
+        margin-bottom: 6px !important;
+        line-height: 1.22 !important;
+      }
+      .modal-comparison {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 6px !important;
+        margin: 8px 0 !important;
+      }
+      .modal-arrow {
+        font-size: 1.1rem !important;
+        transform: none !important;
+      }
+      .modal-box {
+        padding: 6px 4px !important;
+        flex: 1 !important;
+      }
+      .modal-box.basic-box {
+        flex: 0.9 !important;
+      }
+      .modal-box.premium-box {
+        flex: 1.25 !important;
+      }
+      .box-tag, .box-tag-popular {
+        font-size: 0.62rem !important;
+      }
+      .box-price {
+        font-size: 1.25rem !important;
+        margin: 1px 0 !important;
+      }
+      .box-desc {
+        font-size: 0.68rem !important;
+        line-height: 1.15 !important;
+      }
+      .modal-text {
+        font-size: 0.74rem !important;
+        margin-bottom: 10px !important;
+        line-height: 1.25 !important;
+      }
+      .modal-card a.btn-cta {
+        padding: 11px 14px !important;
+        font-size: 0.88rem !important;
+        border-radius: 8px !important;
+        box-shadow: 0 6px 18px rgba(22, 163, 74, 0.4) !important;
+      }
+      .modal-skip {
+        margin-top: 8px !important;
+      }
+      .modal-skip a {
+        font-size: 0.72rem !important;
+        line-height: 1.2 !important;
+        display: inline-block !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2626,11 +2711,15 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       16. SECCIÓN: 7-TAGE GELD-ZURÜCK-GARANTIE (SELLO 3D)
+  
+
+    <!-- ==========================================================================
+       17. SECCIÓN: CAJETILLA DE DOS PLANES (BASIC 14,90 € VS PREMIUM 27,00 €)
        ========================================================================== -->
-  <section class="container">
-    <div class="guarantee-box">
+  <section id="oferta" class="container" style="padding-top: 40px; padding-bottom: 60px;">
+
+    <!-- 16. SECCIÓN: 7-TAGE GELD-ZURÜCK-GARANTIE (SELLO 3D) - VOR DEM ANGEBOT -->
+    <div class="guarantee-box" style="margin-bottom: 35px;">
       <img src="assets/sello-garantia-7-tage.webp" alt="7 Tage Geld zurück Garantie Siegel 3D" class="guarantee-seal-img" loading="lazy">
       <div class="guarantee-text">
         <h3>Unsere 100% risikofreie 7-Tage-Garantie</h3>
@@ -2642,12 +2731,7 @@
         </p>
       </div>
     </div>
-  </section>
 
-    <!-- ==========================================================================
-       17. SECCIÓN: CAJETILLA DE DOS PLANES (BASIC 14,90 € VS PREMIUM 27,00 €)
-       ========================================================================== -->
-  <section id="oferta" class="container" style="padding-top: 40px; padding-bottom: 60px;">
     <div class="text-center" style="margin-bottom: 30px;">
       <span class="hero-badge">WÄHLEN SIE IHREN ZUGANG</span>
       <h2 class="section-title">Starten Sie noch heute mit Spanisch Visuell</h2>
@@ -2719,7 +2803,7 @@
         </ul>
 
         <!-- Botón Verde Directo a Hotmart -->
-        <a href="https://pay.hotmart.com/?checkoutMode=10" class="btn-cta btn-plan-premium" target="_self" data-utmify-checkout="true">
+        <a href="https://pay.hotmart.com/A108285386W?off=kr13u2nq&checkoutMode=10" class="btn-cta btn-plan-premium" target="_self" data-utmify-checkout="true">
           JETZT ZUM SONDERPREIS SICHERN (27,00 €) →
         </a>
 
@@ -3071,13 +3155,13 @@
       </p>
 
       <!-- Botón Upgrade a Premium -->
-      <a href="https://pay.hotmart.com/?checkoutMode=10" class="btn-cta" target="_self" data-utmify-checkout="true" style="display: block; width: 100%; text-align: center; padding: 18px 24px; font-size: 1.05rem;">
+      <a href="https://pay.hotmart.com/A108285386W?off=kr13u2nq&checkoutMode=10" class="btn-cta" style="display: block; width: 100%; text-align: center; padding: 18px 24px; font-size: 1.05rem;">
         JA! ICH WILL DAS KOMPLETTPAKET FÜR NUR 27,00 € →
       </a>
 
       <!-- Enlace Continuar con Basic -->
       <div class="modal-skip">
-        <a href="https://pay.hotmart.com/?checkoutMode=10&plan=basic" class="skip-link" target="_self" data-utmify-checkout="true">
+        <a href="https://pay.hotmart.com/J108319815T?off=x15gl4ii&checkoutMode=10" class="skip-link" target="_self" data-utmify-checkout="true">
           Nein danke, ich möchte nur die 75 Basis-Mindmaps für 14,90 € ohne Boni kaufen »
         </a>
       </div>
